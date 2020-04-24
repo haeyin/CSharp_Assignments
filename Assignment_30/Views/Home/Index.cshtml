@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Get Quote";
+}
+
+<div class="jumbotron">
+    <h1>Assignment 30</h1>
+    <p class="lead">Car Insurance Quoting Application</p>
+</div>
+
+<div class="row">
+    <div class="card-body">
+        <div name="QuoteForm">
+            @using (Html.BeginForm("GetQuote", "Home", FormMethod.Post))
+            {
+                <div class="form-group">
+                    <input name="FirstName" type="text" class="form-control" placeholder="First Name" />
+                </div>
+                <div class="form-group">
+                    <input name="LastName" type="text" class="form-control" placeholder="Last Name" />
+                </div>
+                <div class="form-group">
+                    <input name="EmailAddress" type="text" class="form-control" placeholder="Email Address" />
+                </div>
+                <div class="form-group">
+                    <label for="Birthday">Birthdate</label>
+                    <input type="date" id="Birthday" name="Birthday" />
+                </div>
+
+                <div class="form-group">
+                    <input name="CarYear" type="text" class="form-control" placeholder="Car Year" />
+                </div>
+                <div class="form-group">
+                    <input name="CarMake" type="text" class="form-control" placeholder="Car Make" />
+                </div>
+                <div class="form-group">
+                    <input name="CarModel" type="text" class="form-control" placeholder="Car Model" />
+                </div>
+
+                <div>
+                    <input type="checkbox" name="haveDUI" value="DUI" /><label for="haveDUI"> I have a DUI.</label>
+                    <p>How many speeding tickets have you incurred? Please type a number. <input type="text"></p>
+                    <p>Would you like full coverage or liability?</p>
+                    <select class="form-control">
+                        <option value="Full Coverage">Full Coverage</option>
+                        <option value="Liability">Liability</option>
+                    </select>
+                </div>
+                <input type="submit" />
+            }
+        </div>
+    </div>
+</div>
