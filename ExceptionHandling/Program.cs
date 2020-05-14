@@ -33,7 +33,7 @@ class Program
         }
         finally
         {
-            Console.ReadLine
+            Console.ReadLine;
         }
     }
 }
